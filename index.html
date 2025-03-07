@@ -32,14 +32,14 @@
             background: #444;
             animation: slideIn 1.5s ease-in-out;
         }
-        .about, .projects, .contact {
+        .about, .projects, .contact, .testimonials, .blog {
             padding: 40px;
             background: #333;
             margin: 10px;
             border-radius: 8px;
             transition: transform 0.3s;
         }
-        .about:hover, .projects:hover, .contact:hover {
+        .about:hover, .projects:hover, .contact:hover, .testimonials:hover, .blog:hover {
             transform: scale(1.05);
         }
         button {
@@ -60,60 +60,29 @@
             padding: 15px;
             margin-top: 20px;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .testimonials p {
+            font-style: italic;
         }
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-        .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px;
-            background: #ff9800;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .theme-toggle:hover {
-            background: #e68900;
+        .blog a {
+            color: #ff9800;
+            text-decoration: none;
         }
     </style>
     <script>
         function openChat() {
             window.open("chat.html", "_blank", "width=500,height=600");
         }
-        function toggleTheme() {
-            let body = document.body;
-            if (body.style.backgroundColor === "white") {
-                body.style.backgroundColor = "#2b2b2b";
-                body.style.color = "white";
-            } else {
-                body.style.backgroundColor = "white";
-                body.style.color = "black";
-            }
-        }
     </script>
 </head>
 <body>
-
-<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
 <header>
     <h1>Adix Portfolio</h1>
     <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -135,6 +104,18 @@
     <p>Project 1 - Blogging Website</p>
     <p>Project 2 - Business Website</p>
     <p>Project 3 - Portfolio Website</p>
+</section>
+
+<section class="testimonials" id="testimonials">
+    <h2>What Clients Say</h2>
+    <p>"Adix did an amazing job on my website! Highly recommend his work." - Client 1</p>
+    <p>"Professional and great quality work! Will hire again." - Client 2</p>
+</section>
+
+<section class="blog" id="blog">
+    <h2>My Blog</h2>
+    <p>Check out my latest articles on web development, programming, and freelancing.</p>
+    <a href="#">Read My Blog</a>
 </section>
 
 <section class="contact" id="contact">
